@@ -1,0 +1,25 @@
+{
+  "name": "ichat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "laoshengchuan",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^3.3.7",
+    "emojionearea": "^3.4.1",
+    "express": "^4.17.1",
+    "express-art-template": "^1.0.1",
+    "express-session": "^1.17.0",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.7.14",
+    "multer": "^1.4.2",
+    "nodejs-websocket": "^1.7.2"
+  }
+}

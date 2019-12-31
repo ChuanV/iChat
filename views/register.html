@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=no">
+  <title>注册</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/public/css/login.css">
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+      <h1>用户注册</h1>
+    </div>
+    <form id="register_form"  >
+      <div class="form-group">
+        <label for="username">账号</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Username(限长12个字符）" maxlength="12" autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="password">密码</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn btn-success btn-block">注册</button>
+    </form>
+    <div class="message">
+      <p>已有账号? <a href="/login">点击登录</a>.</p>
+    </div>
+  </div>
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script>
+    $('#register_form').on('submit', function (e) {
+      e.preventDefault()
+      var formData = $(this).serialize()
+      $.ajax({
+        url: '/register',
+        type: 'post',
+        data: formData,
+        dataType: 'json',
+        success: function (data) {
+         if(data.err_code == 0){
+            window.location.href = '/'
+         }else if(data.err_code == 1){
+           alert("信息输入有误，注册失败")
+         }else if(data.err_code == 2){
+          alert("该用户已被注册")
+         }
+         
+        }
+      })
+    })
+  </script>
+</body>
+</html>

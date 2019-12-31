@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#message {
+    width: 100%;
+    height: 37.5rem;
+    overflow-y: auto;
+}
+
+.username span {
+    color: red;
+}
+
+#allOnlinelist {
+    height: 445px;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.time {
+    font-size: 0.75rem;
+    color: #999999;
+}
+.chatUser{
+    color: red;
+}
+#allOnline{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 0;
+    border-bottom: #999 1px solid;
+    margin-bottom: 20px;
+}
+#allOnlinelist{
+    box-sizing: border-box;
+    padding:10px;
+}
+#allOnlinelist p {
+    border-bottom: #999 1px solid;
+    text-align: center;
+    cursor: pointer;
+}
+#allOnlinelist p:hover{
+    background-color: #999;
+}
+.nopadding {
+    padding: 0;
+}
+
+.msgInput textarea {
+    margin-bottom: 10px;
+}
+
+.pic_file {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.pic_file input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.pic_height img {
+    height: 100px;
+}
+.panel-body{
+    position: relative;
+}
+.panel-footer{
+    position: relative;
+    z-index: 10;
+}
+
+#notification {
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    margin-right: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    /* background-color: red; */
+    transition: bottom 1s ease;
+}
+#notification .notiBody {
+    font-size: 18px;
+}
+#notification .notiFooter {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+#content{
+    margin-top: 10px;
+}
+.fileBox{
+    width: 240px;
+    height: 70px;
+    border: #999 1px solid;
+    padding: 5px;
+    background-color: #e4dddd;
+}
+.fileBox a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    text-decoration: none;
+    overflow: hidden;
+    justify-content: space-around;
+    
+}
+.fileInfo .fileSize{
+    font-size: 10px;
+    color: #333;
+}
+.fileIcon img{
+    height: 50px;
+}

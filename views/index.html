@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>iChat</title>
+		<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../public/css/index.css">
+		<!-- <link rel="stylesheet" href="/node_modules/emojione/lib/emojione-awesome/emojione-awesome.scss"> -->
+		<link rel="stylesheet" href="/node_modules/emojionearea/dist/emojionearea.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nopadding hidden-xs">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							用户:<span id="username">{{username}}</span>
+						</div>
+						<div class="panel-body nopadding">
+							<div id="allOnline">在线用户(0)</div>
+							<div id="allOnlinelist"></div>
+						</div>
+					</div>
+					<!--chatterlist-->
+				</div>
+				<!--col-->
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 nopadding">
+						<div class="panel panel-info">
+							<div class="panel-heading form-inline">
+								<span>聊天</span>
+								<span class="pull-right" id="chatToUserName">群聊</span>
+							</div>
+							<!--panel-heading-->
+							<div class="panel-body">
+								<div id="message"></div>
+								<div id="notification">
+									<div class="notiBody">
+										<span class="caller"></span>正在呼叫你<span id="ellipse"></span>
+									</div>
+									<div class="notiFooter">
+										<button type="button" class="btn btn-xs btn-success accept">同意</button>
+										<button type="button" class="btn btn-xs btn-danger reject">拒绝</button>
+									</div>
+								</div>
+							</div>
+							<!--panel-body-->
+							<div class="panel-footer clearfix" >
+								<div class="msgInput">
+									<span class="glyphicon glyphicon glyphicon-film pic_file">
+										<input type="file" name="" id="filmFile" value="" />
+									</span>
+									<span class="glyphicon glyphicon-folder-open pic_file">
+										<input type="file" name="" id="allCategoryFile" value="" />
+									</span>
+									<span class="glyphicon glyphicon-picture pic_file">
+										<input type="file" name="" id="pic_file" value="" />
+									</span>
+									<label class="label label-success" id="pic_file_info"></label>
+									<textarea rows="3" class="form-control" id="content" style="resize:none;"></textarea>
+									<input type="button" id="submit" name="" value="发送" class="btn btn-primary pull-right"  />
+									<input type="button" id="callUser" value="呼叫该用户" class="btn btn-primary pull-right"   style="margin-right: 20px;display: none;"/>
+								</div>
+							</div>
+							<!--panel-footer-->
+						</div>
+						<!--panel-->
+					</div>
+					<!--col-->
+			</div>
+			<!--row-->
+		</div>
+		<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="../public/js/chat.js"></script>
+		<script src="/node_modules/emojione/lib/js/emojione.js"></script>
+		<script src="/node_modules/emojionearea/dist/emojionearea.js"></script>
+		<script>
+			$(function(){
+				$('#content').emojioneArea({ 
+					autoHideFilters: true,
+				})
+			})
+		</script>
+	</body>
+</html>
